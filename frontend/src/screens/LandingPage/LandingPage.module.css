@@ -1,0 +1,38 @@
+.main {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  background-position: center;
+  background-size: cover;
+}
+.title {
+  font-size: 4.5rem;
+}
+.subtitle {
+  font-size: 2.25rem;
+  padding-top: 10px;
+}
+.introText {
+  width: 100%;
+  text-align: center;
+}
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+}
+.buttonContainer a {
+  margin: 20px 10px 0px 10px;
+}
+.landingButton {
+  width: 150px;
+  font-size: 1.3rem;
+}
+
+@media only screen and (min-width: 1200px) {
+  .buttonContainer {
+    padding: 0 200px;
+  }
+  .title {
+    padding: 0 100px;
+  }
+}

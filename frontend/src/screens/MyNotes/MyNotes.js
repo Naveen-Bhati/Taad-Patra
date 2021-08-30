@@ -1,22 +1,28 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Accordion, Badge, Button, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import MainScreen from "../../components/Header/MainScreen";
 import classes from "./MyNotes.module.css";
-import notes from "../../data/notes";
+
 import axios from 'axios'
 
 const MyNotes = () => {
-    const fetchNotes = async () => {
-        const data = await axios.get("http://localhost:5000/api/notes")
-        console.log(data);
+    const [notes, setNotes] = useState([])
 
-    }
+
     useEffect(() => {
 
-        fetchNotes()
+        const fetchNotes = async () => {
+            const { data } = await axios.get("/api/notes")
+
+            setNotes(data)
+        }
+
+        fetchNotes();
+
 
     }, [])
+    console.log(notes);
 
 
     const deleteNoteHandler = () => {

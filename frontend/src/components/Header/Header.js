@@ -6,7 +6,7 @@ const Header = () => {
         <Navbar bg="light" expand="lg" >
             <Container>
                 <Navbar.Brand>
-                    <Link to='/' style={{ textDecoration: 'none' }}>Taad-Patra</Link>
+                    <Link to='/' style={{ textDecoration: 'none', fontFamily: "cursive", fontWeight: "bolder", fontSize: "1.3rem" }}>Taad-Patra</Link>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
@@ -19,7 +19,7 @@ const Header = () => {
                     </Nav>
                     <Nav>
 
-                        <Link style={{ textDecoration: 'none' }} to='/mynotes'>
+                        <Link style={{ textDecoration: 'none', alignSelf: "center" }} to='/mynotes'>
                             My Notes
                         </Link>
 
